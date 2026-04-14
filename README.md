@@ -11,20 +11,30 @@ Créer une image Docker MongoDB personnalisée qui initialise automatiquement un
 - README.md
 
 ## Build
+```bash
 docker build -t blog-mongo:1.0.0 .
+```
 
 ## Run
+```bash
 docker run -d --name blog_mongo --env-file .env -p 27017:27017 blog-mongo:1.0.0
+```
 
 ## Vérification
+```bash
 ./check-status.sh
+```
 
 ## Test Mongo
+```bash
 docker exec -it blog_mongo mongosh -u admin -p VOTRE_MDP --authenticationDatabase admin
+```
 
 Puis dans mongosh :
+```bash
 use blog_db
 db.posts.find().pretty()
+```
 
 ## Docker Hub
 Image publique : matias06/blog-mongo:1.0.0  
