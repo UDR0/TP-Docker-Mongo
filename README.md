@@ -27,3 +27,5 @@ use blog_db
 db.posts.find().pretty()
 
 ## Docker Hub
+Image publique : matias06/blog-mongo:1.0.0  
+Lien : https://hub.docker.com/r/matias06/blog-mongo
